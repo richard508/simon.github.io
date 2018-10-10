@@ -13,25 +13,25 @@
 }
 
 .red {
-  border-top: 150px solid red;
+  border-top: 150px solid #710808;
   margin-right: -30px;
   margin-top: 17px;
 }
 
 .green {
-  border-left: 150px solid green;
+  border-left: 150px solid #013e01;
   margin-left: -318px;
   margin-top: 25px;
 }
 
 .blue {
-  border-bottom: 150px solid blue;
+  border-bottom: 150px solid #070769;
   margin-left: -310px;
   margin-top: 33px;
 }
 
 .yellow {
-  border-right: 150px solid yellow;
+  border-right: 150px solid #717108;
   margin-left: -260px;
   margin-top: 25px;
 }
@@ -89,7 +89,7 @@ h1, .header {
 .current, .best {
   position: relative;
   display: inline-block;
-  background: #00f;
+  background: #aeaeb5;
   padding: 0px 10px;
   font-size: 25px;
   line-height: 47px;
