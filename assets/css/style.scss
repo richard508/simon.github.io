@@ -1,4 +1,9 @@
-#red, #blue, #green, #yellow {
+$red: red;
+$green: green;
+$blue: blue;
+$yellow: yellow;
+
+#red, #blue, #green, #yellow{
   width: 0px;
   height: 0px;
   border-right: 60px solid transparent;
@@ -10,20 +15,18 @@
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
 }
-
 #red {
-  border-top: 60px solid red;
+  border-top: 60px solid $red;
 }
 
 #green {
-  border-left: 60px solid green;
+  border-left: 60px solid $green;
 }
 
 #blue {
-  border-bottom: 60px solid blue;
+  border-bottom: 60px solid $blue;
 }
 
 #yellow {
-  border-right: 60px solid yellow;
+  border-right: 60px solid $yellow;
 }
-/*# sourceMappingURL=style.css.map */
