@@ -1,0 +1,68 @@
+$red: red;
+$green: green;
+$blue: blue;
+$yellow: yellow;
+$black: black;
+$sss: 150px;
+$smCircle: 150px;
+$bigCircle: 350px;
+
+.red, .blue, .green, .yellow{
+  float: left;
+  width: 0px;
+  height: 0px;
+  border-right: $sss solid transparent;
+  border-top: $sss solid transparent;
+  border-left: $sss solid transparent;
+  border-bottom: $sss solid transparent;
+  border-top-left-radius: $sss;
+  border-top-right-radius: $sss;
+  border-bottom-left-radius: $sss;
+  border-bottom-right-radius: $sss;
+}
+.red {
+  border-top: $sss solid $red;
+  margin-right: -30px;
+  margin-top: 17px;
+}
+
+.green {
+  border-left: $sss solid $green;
+  margin-left: -318px;
+  margin-top: 25px;
+}
+
+.blue {
+  border-bottom: $sss solid $blue;
+  margin-left: -310px;
+  margin-top: 33px;
+}
+
+.yellow {
+  border-right: $sss solid $yellow;
+  margin-left: -260px;
+  margin-top: 25px;
+}
+
+.smallBlack {
+  background: $black;
+  width: $smCircle;
+  height: $smCircle;
+  border-radius: 50%;
+  float: left;
+  margin-left: -235px;
+  margin-top: 105px;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigBlack {
+  background: $black;
+  width: $bigCircle;
+  height: $bigCircle;
+  border-radius: 50%;
+  margin-left: -25px;
+}
