@@ -3,6 +3,9 @@ h1, .header{
   justify-content: space-around;
   align-content: center;
 }
+.simonFont{
+  font-family: 'Alfa Slab One', cursive;
+}
 .container{
   display: flex;
   justify-content: center;
@@ -24,7 +27,7 @@ h1, .header{
 
 .smallBlack{
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +35,13 @@ h1, .header{
 
 .start{
   font-size: 1rem;
+  a{
+    color: #ccc;
+    text-decoration: none;
+    &:hover{
+      color: white;
+    }
+  }
 }
 .dot{
   background: #6f0a0a;
@@ -39,6 +49,6 @@ h1, .header{
   height: 10px;
   border-radius: 50%;
   float: right;
-  margin-right: 50px;
+  margin-right: 55px;
   margin-top: 8px;
 }

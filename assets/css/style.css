@@ -64,6 +64,10 @@ h1, .header {
       align-content: center;
 }
 
+.simonFont {
+  font-family: 'Alfa Slab One', cursive;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -91,7 +95,7 @@ h1, .header {
 
 .smallBlack {
   color: white;
-  font-size: 2rem;
+  font-size: 1.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,13 +111,22 @@ h1, .header {
   font-size: 1rem;
 }
 
+.start a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.start a:hover {
+  color: white;
+}
+
 .dot {
   background: #6f0a0a;
   width: 10px;
   height: 10px;
   border-radius: 50%;
   float: right;
-  margin-right: 50px;
+  margin-right: 55px;
   margin-top: 8px;
 }
 /*# sourceMappingURL=style.css.map */
