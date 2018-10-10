@@ -1,29 +1,67 @@
-#red, #blue, #green, #yellow {
+.red, .blue, .green, .yellow {
+  float: left;
   width: 0px;
   height: 0px;
-  border-right: 60px solid transparent;
-  border-top: 60px solid transparent;
-  border-left: 60px solid transparent;
-  border-bottom: 60px solid transparent;
-  border-top-left-radius: 60px;
-  border-top-right-radius: 60px;
-  border-bottom-left-radius: 60px;
-  border-bottom-right-radius: 60px;
+  border-right: 150px solid transparent;
+  border-top: 150px solid transparent;
+  border-left: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
 }
 
-#red {
-  border-top: 60px solid red;
+.red {
+  border-top: 150px solid red;
+  margin-right: -30px;
+  margin-top: 17px;
 }
 
-#green {
-  border-left: 60px solid green;
+.green {
+  border-left: 150px solid green;
+  margin-left: -318px;
+  margin-top: 25px;
 }
 
-#blue {
-  border-bottom: 60px solid blue;
+.blue {
+  border-bottom: 150px solid blue;
+  margin-left: -310px;
+  margin-top: 33px;
 }
 
-#yellow {
-  border-right: 60px solid yellow;
+.yellow {
+  border-right: 150px solid yellow;
+  margin-left: -260px;
+  margin-top: 25px;
+}
+
+.smallBlack {
+  background: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  float: left;
+  margin-left: -235px;
+  margin-top: 105px;
+  color: white;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bigBlack {
+  background: black;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin-left: -25px;
 }
 /*# sourceMappingURL=style.css.map */
