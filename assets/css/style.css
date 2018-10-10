@@ -44,17 +44,6 @@
   float: left;
   margin-left: -235px;
   margin-top: 105px;
-  color: white;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .bigBlack {
@@ -92,11 +81,39 @@ h1, .header {
   background: #aeaeb5;
   padding: 0px 10px;
   font-size: 25px;
-  line-height: 47px;
+  line-height: 35px;
   font-weight: bold;
   border-radius: 3px;
   color: white;
   margin-top: 8px;
   text-align: center;
+}
+
+.smallBlack {
+  color: white;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start {
+  font-size: 1rem;
+}
+
+.dot {
+  background: #6f0a0a;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  float: right;
+  margin-right: 50px;
+  margin-top: 8px;
 }
 /*# sourceMappingURL=style.css.map */
