@@ -8,3 +8,16 @@ h1, .header{
   justify-content: center;
   align-content: center;
 }
+.current, .best{
+  position: relative;
+  display: inline-block;
+  background: #00f;
+  padding: 0px 10px;
+  font-size: 25px;
+  line-height: 47px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: white;
+  margin-top: 8px;
+  text-align: center;
+}
