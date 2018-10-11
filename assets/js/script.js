@@ -4,6 +4,8 @@ $(document).ready(function(){
 	const green = $('.green')
 	const blue = $('.blue')
   const yellow = $('.yellow')
+  var score = 0
+  var bestScore = 0
   var begin = 'off'
 	const simonSays = {
 		1: 'red',
@@ -19,23 +21,43 @@ $(document).ready(function(){
 			$('.'+simonSays[i]).css('background', simonSays[i])
 			i++;
 			if (i < 5) { 
-				onStart();
+				onStart()
 			} else{
 				setTimeout(function () {
           for(let i=1;i<=4;i++){
             $('.'+simonSays[i]).removeAttr("style")
           }
-				}, 500)
+          seq()
+        }, 500)
 			}
 		}, 500)
-	}
+  }
+  
+  var seq = function (){
+    console.log('seq hit')
+    let num = Math.floor(Math.random() * Math.floor(4)+1)
+    transactionalOrder.push(simonSays[num])
+    setTimeout(function () {
+      transactional()
+    }, 100)
+  }
+
+  function transactional(){
+    for(let j = 0; j < transactionalOrder.length; j++){
+      $('.'+transactionalOrder[j]).css('background', transactionalOrder[j])
+      setTimeout(function () {
+        $('.'+transactionalOrder[j]).removeAttr("style")
+      }, 500)
+    }
+  }
 
 	start.click(function(){
 		$('.dot').css('background','red')
     onStart()
     begin = 'on'
+    start.prop("disabled",true);
   })
-  // Math.floor(Math.random() * Math.floor(max))
+
   red.click(function(){
     console.log('red hit')
   })
