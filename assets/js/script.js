@@ -1,10 +1,8 @@
 $(document).ready(function(){
 	const start = $('.start')
-	const red = $('.red')
-	const green = $('.green')
-	const blue = $('.blue')
-  const yellow = $('.yellow')
   const button = $('.button')
+  var atimer = 250
+  var btimer = 300
   var score = 0
   var bestScore = 0
   var begin = 'off'
@@ -40,15 +38,17 @@ $(document).ready(function(){
     transactionalOrder.push(simonSays[num])
     setTimeout(function () {
       transactional()
-    }, 1000)
+    }, 250)
   }
 
   function transactional(){
     for(let j = 0; j < transactionalOrder.length; j++){
-        $('.'+transactionalOrder[j]).css('background', transactionalOrder[j])
-      setTimeout(function () {
-        $('.'+transactionalOrder[j]).removeAttr("style")
-      }, 250)
+        setTimeout(function () {
+          $('.'+transactionalOrder[j]).addClass('on'+transactionalOrder[j])
+        }, atimer*(j+1))
+        setTimeout(function () {
+          $('.'+transactionalOrder[j]).removeClass('on'+transactionalOrder[j])
+        }, btimer*(j+1))
     }
   }
 
@@ -59,7 +59,8 @@ $(document).ready(function(){
     start.prop("disabled",true);
   })
 
-  button.click(function(){
+  button.mousedown(function(){
+    $(this).addClass('on'+this.className.split(' ')[0])
     if(begin == 'on'){
       if(transactionalOrder[click] == this.className.split(' ')[0]){
         click+= 1
@@ -70,9 +71,10 @@ $(document).ready(function(){
         }
         $('.currentScore').html(score)
         if(transactionalOrder.length <= click){
-          console.log('new Order hit '+click)
           click = 0
-          seq()
+          setTimeout(function () {
+            seq()
+          }, 250)
         }
       } else{
         click = 0
@@ -83,5 +85,8 @@ $(document).ready(function(){
         transactionalOrder = []
       }
     }
+  })
+  button.mouseup(function (){
+    $(this).removeClass('on'+this.className.split(' ')[0])
   })
 })

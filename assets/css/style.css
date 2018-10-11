@@ -10,18 +10,10 @@
   margin-right: 10px;
 }
 
-.red:hover {
-  background: red;
-}
-
 .blue {
   background: #070769;
   border-radius: 0 0 0 150px;
   margin-right: 10px;
-}
-
-.blue:hover {
-  background: blue;
 }
 
 .green {
@@ -29,18 +21,10 @@
   border-radius: 0 0 150px 0;
 }
 
-.green:hover {
-  background: green;
-}
-
 .yellow {
   background: #717108;
   border-radius: 0 150px 0 0;
   margin-bottom: 10px;
-}
-
-.yellow:hover {
-  background: yellow;
 }
 
 .bigBlack {
@@ -144,5 +128,21 @@ h1, .header {
   float: right;
   margin-right: 55px;
   margin-top: 8px;
+}
+
+.onred {
+  background: red;
+}
+
+.onblue {
+  background: blue;
+}
+
+.ongreen {
+  background: green;
+}
+
+.onyellow {
+  background: yellow;
 }
 /*# sourceMappingURL=style.css.map */
