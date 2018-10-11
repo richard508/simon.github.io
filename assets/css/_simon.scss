@@ -8,50 +8,40 @@ $smCircle: 150px;
 $bigCircle: 350px;
 
 .red, .blue, .green, .yellow{
+  width: 150px;
+  height: 150px;
   float: left;
-  width: 0px;
-  height: 0px;
-  border-right: $sss solid transparent;
-  border-top: $sss solid transparent;
-  border-left: $sss solid transparent;
-  border-bottom: $sss solid transparent;
-  border-top-left-radius: $sss;
-  border-top-right-radius: $sss;
-  border-bottom-left-radius: $sss;
-  border-bottom-right-radius: $sss;
 }
-.red {
-  border-top: $sss solid $red;
-  margin-right: -30px;
-  margin-top: 17px;
+.red{
+  background: $red;
+  border-radius: $sss 0 0 0;
+  margin-right: 10px;
+  &:hover{
+    background: red;
+  }
 }
-
-.green {
-  border-left: $sss solid $green;
-  margin-left: -318px;
-  margin-top: 25px;
+.blue{
+  background: $blue;
+  border-radius: 0 0 0 $sss;
+  margin-right: 10px;
+  &:hover{
+    background: blue;
+  }
 }
-
-.blue {
-  border-bottom: $sss solid $blue;
-  margin-left: -310px;
-  margin-top: 33px;
+.green{
+  background: $green;
+  border-radius: 0 0 $sss 0;
+  &:hover{
+    background: green;
+  }
 }
-
-.yellow {
-  border-right: $sss solid $yellow;
-  margin-left: -260px;
-  margin-top: 25px;
-}
-
-.smallBlack {
-  background: $black;
-  width: $smCircle;
-  height: $smCircle;
-  border-radius: 50%;
-  float: left;
-  margin-left: -235px;
-  margin-top: 105px;
+.yellow{
+  background: $yellow;
+  border-radius: 0 $sss 0 0;
+  margin-bottom: 10px;
+  &:hover{
+    background: yellow;
+  }
 }
 
 .bigBlack {
@@ -59,5 +49,20 @@ $bigCircle: 350px;
   width: $bigCircle;
   height: $bigCircle;
   border-radius: 50%;
-  margin-left: -25px;
+  margin-left: -21px;
+  margin-top: -18px;
+}
+.smallBlack{
+  background: $black;
+  width: $smCircle;
+  height: $smCircle;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-top: -230px;
+  margin-left: 77px;
 }

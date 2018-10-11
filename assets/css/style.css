@@ -1,49 +1,46 @@
 .red, .blue, .green, .yellow {
+  width: 150px;
+  height: 150px;
   float: left;
-  width: 0px;
-  height: 0px;
-  border-right: 150px solid transparent;
-  border-top: 150px solid transparent;
-  border-left: 150px solid transparent;
-  border-bottom: 150px solid transparent;
-  border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
-  border-bottom-left-radius: 150px;
-  border-bottom-right-radius: 150px;
 }
 
 .red {
-  border-top: 150px solid #710808;
-  margin-right: -30px;
-  margin-top: 17px;
+  background: #710808;
+  border-radius: 150px 0 0 0;
+  margin-right: 10px;
 }
 
-.green {
-  border-left: 150px solid #013e01;
-  margin-left: -318px;
-  margin-top: 25px;
+.red:hover {
+  background: red;
 }
 
 .blue {
-  border-bottom: 150px solid #070769;
-  margin-left: -310px;
-  margin-top: 33px;
+  background: #070769;
+  border-radius: 0 0 0 150px;
+  margin-right: 10px;
+}
+
+.blue:hover {
+  background: blue;
+}
+
+.green {
+  background: #013e01;
+  border-radius: 0 0 150px 0;
+}
+
+.green:hover {
+  background: green;
 }
 
 .yellow {
-  border-right: 150px solid #717108;
-  margin-left: -260px;
-  margin-top: 25px;
+  background: #717108;
+  border-radius: 0 150px 0 0;
+  margin-bottom: 10px;
 }
 
-.smallBlack {
-  background: black;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  float: left;
-  margin-left: -235px;
-  margin-top: 105px;
+.yellow:hover {
+  background: yellow;
 }
 
 .bigBlack {
@@ -51,7 +48,29 @@
   width: 350px;
   height: 350px;
   border-radius: 50%;
-  margin-left: -25px;
+  margin-left: -21px;
+  margin-top: -18px;
+}
+
+.smallBlack {
+  background: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  float: left;
+  margin-top: -230px;
+  margin-left: 77px;
 }
 
 h1, .header {
@@ -77,6 +96,7 @@ h1, .header {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
+  margin-top: 60px;
 }
 
 .current, .best {
@@ -91,20 +111,6 @@ h1, .header {
   color: white;
   margin-top: 8px;
   text-align: center;
-}
-
-.smallBlack {
-  color: white;
-  font-size: 1.7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .start {

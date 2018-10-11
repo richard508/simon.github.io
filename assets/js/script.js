@@ -11,9 +11,10 @@ $(document).ready(function(){
     3: 'green',
     4: 'yellow'
   }
-  var i = 1;
+  const transactionalOrder = []
 
   function onStart () { 
+    var i = 1;
     setTimeout(function () {
       $('.'+simonSays[i]).css(borders[i], '150px solid '+simonSays[i])
       i++;
