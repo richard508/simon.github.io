@@ -93,6 +93,12 @@ $(document).ready(function(){
           }, 250)
         }
       } else{
+        //add sweet alert message
+        swal({
+          type: 'error',
+          title: 'WRONG!!!',
+          text: 'Click Start to try again'
+        })
         //reset everything to start a new game
         click = 0
         score = 0
