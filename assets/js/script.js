@@ -6,7 +6,7 @@ $(document).ready(function(){
   var atimer = 250
   var btimer = 300
   var score = 0
-  var bestScore = 0
+  var bestScore = parseInt($('.bestScore').html(localStorage.getItem('score')).html()) || 0
   var begin = 'off'
   var click = 0
   // map each color values
@@ -18,7 +18,6 @@ $(document).ready(function(){
   }
   // array for order of sequence
 	var transactionalOrder = []
-
   var i = 1;
   // when clicking start do color animation
 	function onStart () { 
@@ -87,6 +86,10 @@ $(document).ready(function(){
             $('.bestScore').html(bestScore)
           }
           click = 0
+          //save best score in local storage
+          var local = $('.bestScore').html()
+          localStorage.setItem('score', local);
+          // alert(localStorage.getItem('score'));
           // call seq function for new order
           setTimeout(function () {
             seq()
