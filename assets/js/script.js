@@ -4,16 +4,18 @@ $(document).ready(function(){
 	const green = $('.green')
 	const blue = $('.blue')
   const yellow = $('.yellow')
+  const button = $('.button')
   var score = 0
   var bestScore = 0
   var begin = 'off'
+  var click = 0
 	const simonSays = {
 		1: 'red',
 		2: 'blue',
 		3: 'green',
 		4: 'yellow'
 	}
-	const transactionalOrder = []
+	var transactionalOrder = []
 
 	var i = 1;
 	function onStart () { 
@@ -34,20 +36,19 @@ $(document).ready(function(){
   }
   
   var seq = function (){
-    console.log('seq hit')
     let num = Math.floor(Math.random() * Math.floor(4)+1)
     transactionalOrder.push(simonSays[num])
     setTimeout(function () {
       transactional()
-    }, 100)
+    }, 1000)
   }
 
   function transactional(){
     for(let j = 0; j < transactionalOrder.length; j++){
-      $('.'+transactionalOrder[j]).css('background', transactionalOrder[j])
+        $('.'+transactionalOrder[j]).css('background', transactionalOrder[j])
       setTimeout(function () {
         $('.'+transactionalOrder[j]).removeAttr("style")
-      }, 500)
+      }, 250)
     }
   }
 
@@ -58,16 +59,29 @@ $(document).ready(function(){
     start.prop("disabled",true);
   })
 
-  red.click(function(){
-    console.log('red hit')
-  })
-  blue.click(function(){
-    console.log('blue hit')
-  })
-  green.click(function(){
-    console.log('hit green')
-  })
-  yellow.click(function(){
-    console.log('hit yellow')
+  button.click(function(){
+    if(begin == 'on'){
+      if(transactionalOrder[click] == this.className.split(' ')[0]){
+        click+= 1
+        score++
+        if(score > bestScore){
+          bestScore = score
+          $('.bestScore').html(bestScore)
+        }
+        $('.currentScore').html(score)
+        if(transactionalOrder.length <= click){
+          console.log('new Order hit '+click)
+          click = 0
+          seq()
+        }
+      } else{
+        click = 0
+        score = 0
+        begin = 'off'
+        $('.dot').removeAttr("style")
+        $('.currentScore').html(score)
+        transactionalOrder = []
+      }
+    }
   })
 })
