@@ -46,6 +46,28 @@ $(document).ready(function(){
     }, 250)
   }
 
+  $('#difficulty button').click(function(){
+    // console.log(this.className.split(' ')[3])
+    $('.normal').removeClass('btn-outline-warning')
+    $('.slow').removeClass('btn-outline-primary')
+    $('.fast').removeClass('btn-outline-danger')
+    if(this.className.split(' ')[3] === 'slow' ){
+      atimer = 1000
+      $('.slow').addClass('btn-outline-primary')
+      reset()
+    }
+    else if(this.className.split(' ')[3] === 'normal' ){
+      atimer = 500
+      $('.normal').addClass('btn-outline-warning')
+      reset()
+    }
+    else{
+      atimer = 200
+      $('.fast').addClass('btn-outline-danger')
+      reset()
+    }
+  })
+
   // light and dim the colors based on order
   function transactional(){
     for(let j = 0; j < transactionalOrder.length; j++){
