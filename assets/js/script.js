@@ -9,6 +9,7 @@ $(document).ready(function(){
   var begin = 'off'
   var click = 0
   var numPlay = []
+  var selectedSpeed = 1000
   // map each color values
 	const simonSays = {
 		1: 'red',
@@ -59,16 +60,19 @@ $(document).ready(function(){
     $('.fast').removeClass('btn-outline-danger')
     if(this.className.split(' ')[3] === 'slow' ){
       atimer = 1000
+      selectedSpeed = atimer
       $('.slow').addClass('btn-outline-primary')
       reset()
     }
     else if(this.className.split(' ')[3] === 'normal' ){
       atimer = 500
+      selectedSpeed = atimer
       $('.normal').addClass('btn-outline-warning')
       reset()
     }
     else{
       atimer = 200
+      selectedSpeed = atimer
       $('.fast').addClass('btn-outline-danger')
       reset()
     }
@@ -76,6 +80,11 @@ $(document).ready(function(){
 
   // light and dim the colors based on order
   function transactional(){
+    if(atimer <= 300){
+      atimer
+    } else{
+      atimer -= 50
+    }
     for(let j = 0; j < transactionalOrder.length; j++){
         setTimeout(function () {
           $('.'+transactionalOrder[j]).addClass('on'+transactionalOrder[j])
@@ -147,6 +156,7 @@ $(document).ready(function(){
     click = 0
     score = 0
     begin = 'off'
+    atimer = selectedSpeed
     $('.dot').removeAttr("style")
     $('.currentScore').html(score)
     transactionalOrder = []
