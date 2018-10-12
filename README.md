@@ -1,4 +1,3 @@
-# simon.github.io
 # Simon Says, "Play this Game"
 ## Overview
 
