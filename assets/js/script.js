@@ -8,6 +8,7 @@ $(document).ready(function(){
   var bestScore = parseInt($('.bestScore').html(localStorage.getItem('score')).html()) || 0
   var begin = 'off'
   var click = 0
+  var numPlay = []
   // map each color values
 	const simonSays = {
 		1: 'red',
@@ -39,11 +40,16 @@ $(document).ready(function(){
   // randomize to choose which to add to transactionalOrder
   var seq = function (){
     let num = Math.floor(Math.random() * Math.floor(4)+1)
+    numPlay.push(num)
     transactionalOrder.push(simonSays[num])
     //call transactional function after order has been added
     setTimeout(function () {
       transactional()
     }, 250)
+  }
+
+  function playAudio(num){
+    $("#"+simonSays[num]).get(0).play()
   }
 
   $('#difficulty button').click(function(){
@@ -73,6 +79,7 @@ $(document).ready(function(){
     for(let j = 0; j < transactionalOrder.length; j++){
         setTimeout(function () {
           $('.'+transactionalOrder[j]).addClass('on'+transactionalOrder[j])
+          playAudio(numPlay[j])
         }, atimer*(j+1))
         setTimeout(function () {
           $('.'+transactionalOrder[j]).removeClass('on'+transactionalOrder[j])
@@ -91,6 +98,11 @@ $(document).ready(function(){
   // on mouse down
   button.mousedown(function(){
     let className = this.className.split(' ')[0]
+    $.each( simonSays, function( key, value ) {
+      if(value === className){
+        playAudio(key)
+      }
+    });
     // change background
     $(this).addClass('on'+className)
     //only do this if begin is on
