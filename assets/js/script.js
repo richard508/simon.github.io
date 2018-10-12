@@ -3,8 +3,7 @@ $(document).ready(function(){
   //set variables
 	const start = $('.start')
   const button = $('.button')
-  var atimer = 250
-  var btimer = 300
+  var atimer = 1000
   var score = 0
   var bestScore = parseInt($('.bestScore').html(localStorage.getItem('score')).html()) || 0
   var begin = 'off'
@@ -55,7 +54,7 @@ $(document).ready(function(){
         }, atimer*(j+1))
         setTimeout(function () {
           $('.'+transactionalOrder[j]).removeClass('on'+transactionalOrder[j])
-        }, btimer*(j+1))
+        }, (atimer*(j+1))+250)
     }
   }
 
