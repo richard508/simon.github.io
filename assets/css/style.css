@@ -120,6 +120,23 @@ h1, .header {
   margin-top: 8px;
 }
 
+#difficulty {
+  background: black;
+  padding: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
 .onDot {
   background: red;
   width: 10px;
