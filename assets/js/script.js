@@ -97,23 +97,27 @@ $(document).ready(function(){
           }, 250)
         }
       } else{
+        reset()
         //add sweet alert message
         swal({
           type: 'error',
           title: 'WRONG!!!',
           text: 'Click Start to try again'
         })
-        //reset everything to start a new game
-        click = 0
-        score = 0
-        begin = 'off'
-        $('.dot').removeAttr("style")
-        $('.currentScore').html(score)
-        transactionalOrder = []
-        start.prop("disabled",false);
       }
     }
   })
+
+  //reset everything to start a new game
+  function reset(){
+    click = 0
+    score = 0
+    begin = 'off'
+    $('.dot').removeAttr("style")
+    $('.currentScore').html(score)
+    transactionalOrder = []
+    start.prop("disabled",false);
+  }
   // remove class for mouse up
   button.mouseup(function (){
     $(this).removeClass('on'+this.className.split(' ')[0])
