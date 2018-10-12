@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Play Simon Says</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald|VT323">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
-  <script defer src="assets/js/script.js"></script>
-</head>
-<body>
-  <header>
-    <h1 class="simonFont">Simon Says!</h1>
-    <section class="header">
-      <section class="rules">
-        <h2>Rules:</h2>
-        <p>Click on the colors after the sequence ends</p>
-        <p>Other keys: Use keys: F,J,E,I</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play Simon Says</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald|VT323">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
+    <script defer src="assets/js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="simonFont">Simon Says!</h1>
+      <section class="header">
+        <section class="rules">
+          <h2>Rules:</h2>
+          <p>Click on the colors after the sequence ends</p>
+          <p>Other keys: Use keys: F,J,E,I</p>
+        </section>
+        <section class="scores">
+          <div class="current">Current: <br /><span class="currentScore">0</span></div>
+          <div class="best">Best: <br /><span class="bestScore">0</span></div>
+        </section>
       </section>
-      <section class="scores">
-        <div class="current">Current: <br /><span class="currentScore">0</span></div>
-        <div class="best">Best: <br /><span class="bestScore">0</span></div>
-      </section>
-    </section>
-  </header>
-  <div class="container">
-    <div class="simon">
-      <div id="top">
-        <div class="red button"></div>
-        <div class="yellow button"></div>
+    </header>
+    <div class="container">
+      <div class="simon">
+        <div id="top">
+          <div class="red button"></div>
+          <div class="yellow button"></div>
+        </div>
+        <div id="bottom">
+          <div class="blue button"></div>
+          <div class="green button"></div>
+        </div>
+        <div class="smallBlack">
+          <span>
+            <span class="name simonFont">SIMON</span>
+            <div class="start"><a href="javascript:void(0)">start</a><span class="dot"></span></div>
+          </span>
+        </div>
+        <div class="bigBlack"></div>
       </div>
-      <div id="bottom">
-        <div class="blue button"></div>
-        <div class="green button"></div>
-      </div>
-      <div class="smallBlack">
-        <span>
-          <span class="name simonFont">SIMON</span>
-          <div class="start"><a href="javascript:void(0)">start</a><span class="dot"></span></div>
-        </span>
-      </div>
-      <div class="bigBlack"></div>
     </div>
-  </div>
-  <section id="difficulty">
-    <button class="btn btn-primary btn-lg slow btn-outline-primary">Slow</button>
-    <button class="btn btn-warning btn-lg normal">Normal</button>
-    <button class="btn btn-danger btn-lg fast">Fast</button>
-  </section>
-</body>
+    <section id="difficulty">
+      <button class="btn btn-primary btn-lg slow btn-outline-primary">Slow</button>
+      <button class="btn btn-warning btn-lg normal">Normal</button>
+      <button class="btn btn-danger btn-lg fast">Fast</button>
+    </section>
+  </body>
+  <audio class="audio" id="yellow" preload="auto" >
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3">
+      </audio>
+    <audio class="audio" id="green" preload="auto" >
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3">
+    </audio>
+    <audio class="audio" id="red" preload="auto" >
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3">
+    </audio>
+    <audio class="audio" id="blue" preload="auto" >
+      <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">
+    </audio>
+    <audio class="audio" id="error" preload="auto">
+      <source src="https://raw.githubusercontent.com/srabalogh/Hello-World/master/Cartoon_Boing.mp3"> 
+    </audio>
 </html>
