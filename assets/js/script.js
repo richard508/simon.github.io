@@ -106,7 +106,9 @@ $(document).ready(function(){
     // change background
     $(this).addClass('on'+className)
     //only do this if begin is on
-    if(begin == 'on'){
+    if(begin == 'off'){
+      return
+    }
       //if color click is correct
       if(transactionalOrder[click] == className){
         click+= 1
@@ -138,7 +140,6 @@ $(document).ready(function(){
           text: 'Click Start to try again'
         })
       }
-    }
   })
 
   //reset everything to start a new game
