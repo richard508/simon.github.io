@@ -109,37 +109,37 @@ $(document).ready(function(){
     if(begin == 'off'){
       return
     }
-      //if color click is correct
-      if(transactionalOrder[click] == className){
-        click+= 1
-        // start new sequence if correct
-        if(transactionalOrder.length <= click){
-          score++
-          $('.currentScore').html(score)
-          // increase best score if new score is higher
-          if(score > bestScore){
-            bestScore = score
-            $('.bestScore').html(bestScore)
-          }
-          click = 0
-          //save best score in local storage
-          var local = $('.bestScore').html()
-          localStorage.setItem('score', local);
-          // alert(localStorage.getItem('score'));
-          // call seq function for new order
-          setTimeout(function () {
-            seq()
-          }, 250)
+    //if color click is correct
+    if(transactionalOrder[click] == className){
+      click+= 1
+      // start new sequence if correct
+      if(transactionalOrder.length <= click){
+        score++
+        $('.currentScore').html(score)
+        // increase best score if new score is higher
+        if(score > bestScore){
+          bestScore = score
+          $('.bestScore').html(bestScore)
         }
-      } else{
-        reset()
-        //add sweet alert message
-        swal({
-          type: 'error',
-          title: 'WRONG!!!',
-          text: 'Click Start to try again'
-        })
+        click = 0
+        //save best score in local storage
+        var local = $('.bestScore').html()
+        localStorage.setItem('score', local);
+        // alert(localStorage.getItem('score'));
+        // call seq function for new order
+        setTimeout(function () {
+          seq()
+        }, 250)
       }
+    } else{
+      reset()
+      //add sweet alert message
+      swal({
+        type: 'error',
+        title: 'WRONG!!!',
+        text: 'Click Start to try again'
+      })
+    }
   })
 
   //reset everything to start a new game
