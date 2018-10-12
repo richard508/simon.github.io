@@ -69,12 +69,13 @@ $(document).ready(function(){
 
   // on mouse down
   button.mousedown(function(){
+    let className = this.className.split(' ')[0]
     // change background
-    $(this).addClass('on'+this.className.split(' ')[0])
+    $(this).addClass('on'+className)
     //only do this if begin is on
     if(begin == 'on'){
       //if color click is correct
-      if(transactionalOrder[click] == this.className.split(' ')[0]){
+      if(transactionalOrder[click] == className){
         click+= 1
         // start new sequence if correct
         if(transactionalOrder.length <= click){
