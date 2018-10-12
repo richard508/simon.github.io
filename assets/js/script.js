@@ -143,11 +143,13 @@ $(document).ready(function(){
     } else{
       reset()
       //add sweet alert message
-      swal({
-        type: 'error',
-        title: 'WRONG!!!',
-        text: 'Click Start to try again'
-      })
+      setTimeout(function () {
+        swal({
+          type: 'error',
+          title: 'WRONG!!!',
+          text: 'Click Start to try again'
+        })
+      },500)
     }
   })
 
