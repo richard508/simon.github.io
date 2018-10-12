@@ -5,7 +5,7 @@ For project #1, I created a simple game of Simon Says.
 
 When the player goes to the site. They see the Simon Says game. Simply click start and the game lights up and begins. Two scores are kept in the top right corner. The score, which is your current score and the best score. Player can leave and comeback and their score is saved with local storage. Sound and keys can be used for the visually impaired.
 
-**Live site:** <http://*>
+**Live site:** <https://naughty-panini-f14de8.netlify.com/>
 
 ## Technologies Used
 
@@ -29,6 +29,9 @@ When the player goes to the site. They see the Simon Says game. Simply click sta
 (https://www.figma.com/file/dMwXie7vlu1hKGPRYUbIEoAb/Simon-Says-Design?node-id=2%3A1)
 
 ## Live Screenshot
+![Complete] (https://naughty-panini-f14de8.netlify.com/assets/img/simon.png)
 
 ## Future Development
+
+  * Add keyboard options for visually the impaired
 
