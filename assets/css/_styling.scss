@@ -8,9 +8,10 @@ h1, .header{
 }
 .container{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   margin-top: 60px;
+  max-width: 960px;
 }
 .rules{
   position: relative;
@@ -68,4 +69,53 @@ h1, .header{
 }
 .btn{
   margin-right: 10px;
+}
+
+.shadow {
+  -webkit-box-shadow: 3px 3px 5px 6px black;
+  -moz-box-shadow:    3px 3px 5px 6px black;
+  box-shadow:         3px 3px 5px 6px black;
+}
+
+.playerWindow{
+  width: 36vw;
+  height: 45vh;
+  margin: 0 20px 0 0;
+  position: relative;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+  display: flex;
+  flex-flow: column;
+  border-radius: 10px 10px 0 0;
+  background: white;
+  bottom: 0;
+  transition: .1s ease-out;
+}
+
+.pheader{
+  border-bottom: 1px solid #bbb;
+  height: 9vh;
+  padding: 20px 10px;
+  background: #eee;
+  font-size: 24px;
+}
+.pcontent{
+  overflow: auto;
+  padding: 10px;
+}
+.player{
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 5px;
+}
+.player1{
+  color: #717108;
+}
+.player2{
+  color: blue;
+}
+.winner{
+  color: green;
+}
+
+.failed{
+  color:red;
 }
