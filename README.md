@@ -34,4 +34,7 @@ When the player goes to the site. They see the Simon Says game. Simply click sta
 ## Future Development
 
   * Add keyboard options for visually the impaired
+  * Add a second player
+  * Add Upto 20 players
+  
 
